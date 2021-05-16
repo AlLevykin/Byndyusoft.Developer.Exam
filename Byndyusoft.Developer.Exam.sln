@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Byndyusoft.ConsoleCalculator", "Byndyusoft.ConsoleCalculator\Byndyusoft.ConsoleCalculator.csproj", "{7F8211D6-892D-4A7B-B4FF-C4B804ADACAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Byndyusoft.RPNLibrary", "Byndyusoft.RPNLibrary\Byndyusoft.RPNLibrary.csproj", "{1CD12BF4-9108-4244-8CD4-9365BABAEBC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Byndyusoft.SAMParser", "Byndyusoft.SAMParser\Byndyusoft.SAMParser.csproj", "{1CD12BF4-9108-4244-8CD4-9365BABAEBC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Byndyusoft.RPNLibrary.Tests", "Byndyusoft.RPNLibrary.Tests\Byndyusoft.RPNLibrary.Tests.csproj", "{32B2ABE3-888A-430F-AADE-33AAE637A167}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Byndyusoft.SAMParser.Tests", "Byndyusoft.SAMParser.Tests\Byndyusoft.SAMParser.Tests.csproj", "{32B2ABE3-888A-430F-AADE-33AAE637A167}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
