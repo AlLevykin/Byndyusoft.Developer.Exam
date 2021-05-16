@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Byndyusoft.ConsoleCalculator", "Byndyusoft.ConsoleCalculator\Byndyusoft.ConsoleCalculator.csproj", "{7F8211D6-892D-4A7B-B4FF-C4B804ADACAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Byndyusoft.RPNLibrary", "Byndyusoft.RPNLibrary\Byndyusoft.RPNLibrary.csproj", "{1CD12BF4-9108-4244-8CD4-9365BABAEBC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Byndyusoft.RPNLibrary.Tests", "Byndyusoft.RPNLibrary.Tests\Byndyusoft.RPNLibrary.Tests.csproj", "{32B2ABE3-888A-430F-AADE-33AAE637A167}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7F8211D6-892D-4A7B-B4FF-C4B804ADACAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F8211D6-892D-4A7B-B4FF-C4B804ADACAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F8211D6-892D-4A7B-B4FF-C4B804ADACAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD12BF4-9108-4244-8CD4-9365BABAEBC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD12BF4-9108-4244-8CD4-9365BABAEBC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD12BF4-9108-4244-8CD4-9365BABAEBC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD12BF4-9108-4244-8CD4-9365BABAEBC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B2ABE3-888A-430F-AADE-33AAE637A167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B2ABE3-888A-430F-AADE-33AAE637A167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B2ABE3-888A-430F-AADE-33AAE637A167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B2ABE3-888A-430F-AADE-33AAE637A167}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
