@@ -2,7 +2,7 @@ using System;
 using Xunit;
 using Byndyusoft;
 
-namespace Byndyusoft.RPNLibrary.Tests
+namespace Byndyusoft.ExpressionParsers.Tests
 {
     public class SAMParserShould
     {

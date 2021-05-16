@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Byndyusoft.RPNLibrary
+namespace Byndyusoft.ExpressionParsers
 {
     public class SAMParser
     {
