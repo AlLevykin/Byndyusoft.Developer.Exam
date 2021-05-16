@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Byndyusoft.RPNLibrary\Byndyusoft.RPNLibrary.csproj" />
+    <ProjectReference Include="..\Byndyusoft.SAMParser\Byndyusoft.SAMParser.csproj" />
   </ItemGroup>
 
 </Project>
