@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Byndyusoft.SAMParser.ElementaryFunctions\Byndyusoft.SAMParser.ElementaryFunctions.csproj" />
+    <ProjectReference Include="..\Byndyusoft.SAMParser.TrigFunctions\Byndyusoft.SAMParser.TrigFunctions.csproj" />
+    <ProjectReference Include="..\Byndyusoft.SAMParser\Byndyusoft.SAMParser.csproj" />
+  </ItemGroup>
+
+</Project>
