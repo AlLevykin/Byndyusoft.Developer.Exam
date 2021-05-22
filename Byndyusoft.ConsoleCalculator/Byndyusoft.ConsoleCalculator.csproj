@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Byndyusoft.SAMParser.ElementaryFunctions\Byndyusoft.SAMParser.ElementaryFunctions.csproj" />
+    <ProjectReference Include="..\Byndyusoft.SAMParser.TrigFunctions\Byndyusoft.SAMParser.TrigFunctions.csproj" />
     <ProjectReference Include="..\Byndyusoft.SAMParser\Byndyusoft.SAMParser.csproj" />
   </ItemGroup>
 
