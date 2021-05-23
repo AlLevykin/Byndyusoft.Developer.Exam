@@ -7,11 +7,24 @@ using System.Text;
 
 namespace Byndyusoft.SAMParser
 {
+    /// <summary>
+    /// Класс содержит методы для разбора и вычисления математических выражений.     
+    /// </summary>    
+    /// <remarks>
+    /// Функционал класса можно расширить с помощью пользовательских функций.
+    /// </remarks> 
     public static class Parser
     {
-        public const char START_ARG = '(';
+        internal const char END_LINE = '\n';
+        internal const char START_ARG = '(';
+
+        /// <summary>
+        /// Символ закрывающейся скобки.     
+        /// </summary>
+        /// <remarks>
+        /// Применяется в качестве символа поумолчанию при разработке пользовательских функций.
+        /// </remarks> 
         public const char END_ARG = ')';
-        public const char END_LINE = '\n';
 
         private static Dictionary<char, MathOperation> _operations = new Dictionary<char, MathOperation>
         {
@@ -34,11 +47,37 @@ namespace Byndyusoft.SAMParser
         private static StrToDoubleFunction _strToDoubleFunction = new StrToDoubleFunction();
         private static IdentityFunction _identityFunction = new IdentityFunction();
 
+        /// <summary>
+        /// Метод для конфигурирования класса.
+        /// </summary>
+        /// <remarks>
+        /// Предназначен для добавления пользовательских функций.
+        /// </remarks> 
+        /// <param name="name">.</param>
+        /// <param name="function">Класс, реализующий интерфейс IParserFunction.</param>
+        /// <example>
+        /// <code>
+        /// Parser.AddFunction("sin", new SinFunction());
+        /// </code>
+        /// </example>
         public static void AddFunction(string name, IParserFunction function)
         {
             _functions[name] = function;
         }
 
+        /// <summary>
+        /// Метод выполняет разбор и вычисление математического выражения.
+        /// </summary>
+        /// <returns>
+        /// Результат вычисления.
+        /// </returns>
+        /// <param name="expression">Математическое выражение для разбора и вычисления.</param>
+        /// <example>
+        /// <code>
+        /// double result = Parser.Process(expression);
+        /// </code>
+        /// </example>
+        /// <exception cref="System.ArgumentException">Возникает при неправильно заданном математическом выражении.</exception>
         public static double Process(string expression)
         {
             int from = 0;
@@ -113,6 +152,31 @@ namespace Byndyusoft.SAMParser
             return current.Value;
         }
 
+        /// <summary>
+        /// Метод выполняет разбор и вычисление <c>вложенной части</c> математического выражения.
+        /// </summary>
+        /// <remarks>
+        /// Применяется для рекурсивного вызова при необходимости вычисления аргументов пользовательских функций.
+        /// </remarks> 
+        /// <returns>
+        /// Результат вычисления.
+        /// </returns>
+        /// <param name="expression">Математическое выражение для разбора и вычисления.</param>
+        /// <param name="from">Стартовая позиция вложенного математического выражения.</param>
+        /// <param name="to">Символ, указывающий на окончание вложенной части математического выражения.</param>
+        /// <example>
+        /// <code>
+        /// public class AbsFunction : IParserFunction
+        /// {
+        ///     public double Evaluate(string expression, ref int from)
+        ///     {
+        ///         double arg = Parser.Calculate(expression, ref from, Parser.END_ARG);
+        ///         return Math.Abs(arg);
+        ///     }
+        /// }
+        /// </code>
+        /// </example>
+        /// <exception cref="System.ArgumentException">Возникает при неправильно заданном математическом выражении или ограничивающих вложенное выражение аргументах.</exception>
         public static double Calculate(string expression, ref int from, char to = END_LINE)
         {
             if (from >= expression.Length || expression[from] == to)
